@@ -37,20 +37,40 @@ function Register () {
     };
    
     return ( 
-        <div className="register">
-            <h2>Register</h2>
-            {error && <ErrorNotice message={error} clearError={() => setError(undefined)} />}
-            <form onSubmit={submit}>
-                <label>Email: </label>
-                <input type="email" id="email" onChange={e => setEmail(e.target.value)}/>
-                <label>Password: </label>
-                <input type="password" id="password" onChange={e => setPassword(e.target.value)}/>
-                <input type="password" placeholder="Confirm password" onChange={e => setPasswordCheck(e.target.value)}/>
-                <label>Display name </label>
-                <input type="text" id="dsplay-name" onChange={e => setDisplayName(e.target.value)}/>
-                <input type="submit" value="Register" className="btn btn-primary" />
-            </form>
-        </div>
+        <><>
+            <div class="container ">
+                <div class="row">
+                    <div class="col">
+                        
+                    </div>
+                    <div class="col">
+                    <div >
+                <h2 className='text-center'>Register</h2>
+                {error && <ErrorNotice message={error} clearError={() => setError(undefined)} />}
+                <form onSubmit={submit}>
+                <div class="mb-3"> <label className="form-label">Email: </label>
+                    <input className='form-control' type="email" id="email" onChange={e => setEmail(e.target.value)} />
+                    </div>
+                    <div class="mb-3">
+                    <label className="form-label">Password: </label>
+                    <input type="password" className='form-control' id="password" onChange={e => setPassword(e.target.value)} />
+                    </div>
+                    <div class="mb-3">
+                    <label className="form-label"> Confirm Password: </label>
+                    <input type="password" className='form-control' placeholder="Confirm password" onChange={e => setPasswordCheck(e.target.value)} />
+                    </div>
+                    <div class="mb-3"><label className="form-label">Display name </label>
+                    <input type="text" placeholder="Display name" className='form-control' id="dsplay-name" onChange={e => setDisplayName(e.target.value)} /></div>
+                    <div class="mb-3">  <input type="submit" value="Register" className="btn btn-primary" /></div>
+                </form>
+            </div>
+                    </div>
+                    <div class="col">
+                        
+                    </div>
+                </div>
+            </div></>
+            </>
         );
 }
  
